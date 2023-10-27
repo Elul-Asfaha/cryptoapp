@@ -4,6 +4,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { BsCurrencyExchange } from "react-icons/bs";
 import { MdCurrencyExchange } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
+import { useState } from "react";
 const NavBar = () => {
     const navItemData = [
         {
@@ -13,20 +14,24 @@ const NavBar = () => {
         },
         {
             title: "CryptoCurrencies",
-            path: "",
+            path: "/cryptoCurrencies",
             icon: <BsCurrencyExchange />,
         },
         {
             title: "Exchange",
-            path: "",
+            path: "/exchange",
             icon: <MdCurrencyExchange />,
         },
         {
             title: "News",
-            path: "",
+            path: "/news",
             icon: <IoNewspaperOutline />,
         },
     ];
+    const [active, setActive] = useState("Home");
+    const handleActive = (name: string) => {
+        setActive(name);
+    };
 
     return (
         <div>
@@ -40,9 +45,12 @@ const NavBar = () => {
             <div>
                 {navItemData.map((items) => (
                     <NavItems
+                        key={items.title}
                         title={items.title}
                         path={items.path}
                         icon={items.icon}
+                        active={active}
+                        activeHandler={handleActive}
                     />
                 ))}
             </div>

@@ -1,6 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import { NavBar } from "./components";
-import Home from "./components/Home";
+import {
+    NavBar,
+    Home,
+    CryptoCurrencies,
+    Exchanges,
+    News,
+    CryptoDetails,
+} from "./components";
 const App = () => {
     return (
         <div>
@@ -9,6 +15,13 @@ const App = () => {
             </div>
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/exchange' element={<Exchanges />} />
+                <Route
+                    path='/cryptocurrencies'
+                    element={<CryptoCurrencies />}
+                />
+                <Route path='/crypto/:cryptoid' element={<CryptoDetails />} />
+                <Route path='/news' element={<News />} />
             </Routes>
         </div>
     );
