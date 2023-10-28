@@ -41,7 +41,7 @@ const NavBar = () => {
     };
 
     return (
-        <div className='flex flex-col w-fit h-full gap-3 p-3 bg-blue-950 text-slate-300'>
+        <div className='hidden md:flex flex-col w-fit h-full gap-3 p-3 bg-blue-950 text-slate-300'>
             <div className='flex gap-3 items-center'>
                 <div className={`${collapsed ? "hidden" : ""}`}>Avatar</div>
                 <div className='flex items-center gap-2'>
