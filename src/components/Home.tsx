@@ -29,8 +29,28 @@ type HomeType = {
         btcPrice?: string;
         Volume?: string;
     }[];
+    displayNews: {
+        datePublished: string;
+        description: string;
+        image: {
+            thumbnail: {
+                contentUrl: string;
+            };
+            isLicensed: boolean;
+        };
+        name: string;
+        provider: {
+            image: {
+                thumbnail: {
+                    contentUrl: string;
+                }[];
+            };
+            name: string;
+        }[];
+        url: string;
+    }[];
 };
-const Home = ({ displayStatus, displayCoins }: HomeType) => {
+const Home = ({ displayNews, displayStatus, displayCoins }: HomeType) => {
     return (
         <div className='bg-gray-50 p-5'>
             <p className='text-3xl py-10'>Global Crypto Stats</p>
@@ -83,7 +103,7 @@ const Home = ({ displayStatus, displayCoins }: HomeType) => {
                     <Link to='/news'>Show more</Link>
                 </p>
             </div>
-            <News />
+            <News displayNews={displayNews} Home={true} />
         </div>
     );
 };

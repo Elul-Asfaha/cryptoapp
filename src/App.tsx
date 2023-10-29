@@ -900,7 +900,36 @@ const App = () => {
             btcPrice: "0.000029284168898093",
         },
     ]);
-    // const fetchdata = async () => {
+    const [news, setNews] = useState([
+        {
+            datePublished: "2023-10-29T20:42:00.0000000Z",
+            description:
+                "Im muslimisch geprägtem Nordkaukasus verstärken sich antisemitische Vorfälle. In der Teilrepublik Dagestan stürmte ein wütender Mob den Flughafen, nachdem dort eine Maschine aus Israel gelandet war",
+            image: {
+                thumbnail: {
+                    contentUrl:
+                        "https://www.bing.com/th?id=ORMS.91863e49b6ae4255e40f8c1c8d82fab6&pid=Wdp",
+                },
+                isLicensed: true,
+            },
+            name: "Antijüdischer Mob stürmt Flughafen nach Landung einer Maschine aus Tel Aviv",
+            provider: [
+                {
+                    image: {
+                        thumbnail: [
+                            {
+                                contentUrl:
+                                    "https://www.bing.com/th?id=ODF.VgKhVqBW0UdrpbRTR1Q2sg&pid=news",
+                            },
+                        ],
+                    },
+                    name: "WELT",
+                },
+            ],
+            url: "https://www.msn.com/de-de/nachrichten/welt/antij%C3%BCdischer-mob-st%C3%BCrmt-flughafen-nach-landung-einer-maschine-aus-tel-aviv/ar-AA1j3o1H",
+        },
+    ]);
+    // const fetchCoinData = async () => {
     //     const url =
     //         "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
     //     const options = {
@@ -921,8 +950,30 @@ const App = () => {
     //         console.error(error);
     //     }
     // };
+    // const fetchNewsData = async () => {
+    //     const url =
+    //         "https://bing-news-search1.p.rapidapi.com/news?safeSearch=Off&textFormat=Raw";
+    //     const options = {
+    //         method: "GET",
+    //         headers: {
+    //             "X-BingApis-SDK": "true",
+    //             "X-RapidAPI-Key":
+    //                 "d1fd8aa275mshdfbdece75472e69p13a6b7jsnec1cb651fbf3",
+    //             "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+    //         },
+    //     };
+
+    //     try {
+    //         const response = await fetch(url, options);
+    //         const result = await response.json();
+    //         setNews(result.value);
+    //     } catch (error) {
+    //         console.error(error);
+    //     }
+    // };
     // useEffect(() => {
-    //     fetchdata();
+    //     fetchCoinData();
+    //     fetchNewsData();
     // }, []);
     return (
         <div className='h-screen max-h-screen w-full overflow-y-hidden'>
@@ -936,6 +987,7 @@ const App = () => {
                                 <Home
                                     displayStatus={stats}
                                     displayCoins={coins}
+                                    displayNews={news}
                                 />
                             }
                         />
@@ -953,7 +1005,10 @@ const App = () => {
                             path='/crypto/:cryptoid'
                             element={<CryptoDetails />}
                         />
-                        <Route path='/news' element={<News />} />
+                        <Route
+                            path='/news'
+                            element={<News displayNews={news} Home={false} />}
+                        />
                     </Routes>
                     <Footer />
                 </div>

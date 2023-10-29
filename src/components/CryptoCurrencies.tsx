@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import millify from "millify";
 import { useEffect, useState } from "react";
 type CryptoCurrenciesType = {
     displayCoins: {
