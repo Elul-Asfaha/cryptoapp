@@ -11,22 +11,23 @@ type HomeType = {
         totalMarkets?: number;
     };
     displayCoins: {
-        Volume: string;
-        btcPrice: string;
-        change: string;
-        coinrankingUrl: string;
-        color: string;
-        iconUrl: string;
-        listedAt: number;
-        lowVolume: boolean;
-        marketCap: string;
-        name: string;
-        price: string;
-        rank: number;
-        sparkline: string[];
-        symbol: string;
-        tier: number;
-        uuid: string;
+        uuid?: string;
+        symbol?: string;
+        name?: string;
+        color?: string;
+        iconUrl?: string;
+        marketCap?: string;
+        price?: string;
+        listedAt?: number;
+        tier?: number;
+        change?: string;
+        rank?: number;
+        sparkline?: string[];
+        lowVolume?: boolean;
+        coinrankingUrl?: string;
+        "24hVolume"?: string;
+        btcPrice?: string;
+        Volume?: string;
     }[];
 };
 const Home = ({ displayStatus, displayCoins }: HomeType) => {
@@ -67,17 +68,19 @@ const Home = ({ displayStatus, displayCoins }: HomeType) => {
                     </p>
                 </div>
             </div>
-            <div className='flex justify-between items-center'>
-                <p className='text-xl'>Top 10 CryptoCurrencies in the world</p>
+            <div className='flex justify-between items-center py-10'>
+                <p className='text-xl lg:text-3xl'>
+                    Top 10 CryptoCurrencies in the world
+                </p>
                 <p className='w-full max-w-fit text-lg text-blue-500'>
-                    <Link to=''>Show more</Link>
+                    <Link to='/cryptocurrencies'>Show more</Link>
                 </p>
             </div>
             <CryptoCurrencies displayCoins={displayCoins} Home={true} />
-            <div className='flex justify-between items-center'>
-                <p className='text-xl'>Latest Crypto News</p>
+            <div className='flex justify-between items-center py-10'>
+                <p className='text-xl lg:text-3xl'>Latest Crypto News</p>
                 <p className='w-full max-w-fit text-lg text-blue-500'>
-                    <Link to=''>Show more</Link>
+                    <Link to='/news'>Show more</Link>
                 </p>
             </div>
             <News />
