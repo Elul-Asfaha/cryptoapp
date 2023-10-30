@@ -107,8 +107,8 @@ const CryptoCurrencies = ({ displayCoins, Home }: CryptoCurrenciesType) => {
 
     return (
         <div
-            className={`min-h-screen bg-gray-50 flex flex-col gap-5 ${
-                Home ? "py-5" : "p-5"
+            className={`bg-gray-50 flex flex-col gap-5 ${
+                Home ? "py-5" : "p-5 min-h-screen"
             }`}
         >
             {!Home && (

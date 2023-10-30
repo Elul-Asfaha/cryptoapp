@@ -36,7 +36,7 @@ const News = ({ displayNews, Home }: newsType) => {
         >
             <div className='w-full flex gap-2'>
                 <p className='min-w-[65%] font-bold py-3'>{items.name}</p>
-                <div className='flex w-full'>
+                <div className='flex  max-h-[200px] max-w-[100px] w-full'>
                     <img
                         src={items?.image?.thumbnail?.contentUrl || demoImage}
                         alt='news'
@@ -44,23 +44,28 @@ const News = ({ displayNews, Home }: newsType) => {
                     />
                 </div>
             </div>
-            <p>
+            <p className='indent-5 text-gray-700'>
                 {items.description.length > 100
                     ? `${items.description.substring(0, 100)}...`
                     : items.description}
             </p>
-            <div className='flex gap-3 items-center'>
-                <div className='flex h-[30px] w-[30px] rounded-full overflow-clip'>
-                    <img
-                        src={
-                            items.provider[0]?.image?.thumbnail[0]
-                                ?.contentUrl || demoImage
-                        }
-                        alt='news'
-                        className='object-cover'
-                    />
+            <div className='flex justify-between'>
+                <div className='flex gap-2 items-center'>
+                    <div className='flex h-[30px] w-[30px] rounded-full overflow-clip'>
+                        <img
+                            src={
+                                items.provider[0]?.image?.thumbnail[0]
+                                    ?.contentUrl || demoImage
+                            }
+                            alt='news'
+                            className='object-cover'
+                        />
+                    </div>
+                    <p>{items.provider[0]?.name}</p>
                 </div>
-                <p>{moment(items.datePublished).startOf("hour").fromNow()}</p>
+                <p className='text-gray-600'>
+                    {moment(items.datePublished).startOf("hour").fromNow()}
+                </p>
             </div>
         </a>
     )); //renders when its the home page
@@ -74,7 +79,7 @@ const News = ({ displayNews, Home }: newsType) => {
         >
             <div className='w-full flex gap-2'>
                 <p className='min-w-[65%] font-bold py-3'>{items.name}</p>
-                <div className='flex w-full'>
+                <div className='flex  max-h-[200px] max-w-[100px] w-full'>
                     <img
                         src={items?.image?.thumbnail?.contentUrl || demoImage}
                         alt='news'
@@ -82,35 +87,41 @@ const News = ({ displayNews, Home }: newsType) => {
                     />
                 </div>
             </div>
-            <p>
+            <p className='indent-5 text-gray-700'>
                 {items.description.length > 100
                     ? `${items.description.substring(0, 100)}...`
                     : items.description}
             </p>
-            <div className='flex gap-3 items-center'>
-                <div className='flex h-[30px] w-[30px] rounded-full overflow-clip'>
-                    <img
-                        src={
-                            items.provider[0]?.image?.thumbnail[0]
-                                ?.contentUrl || demoImage
-                        }
-                        alt='news'
-                        className='object-cover'
-                    />
+            <div className='flex justify-between'>
+                <div className='flex gap-2 items-center'>
+                    <div className='flex h-[30px] w-[30px] rounded-full overflow-clip'>
+                        <img
+                            src={
+                                items.provider[0]?.image?.thumbnail[0]
+                                    ?.contentUrl || demoImage
+                            }
+                            alt='news'
+                            className='object-cover'
+                        />
+                    </div>
+                    <p>{items.provider[0]?.name}</p>
                 </div>
-                <p>{moment(items.datePublished).startOf("hour").fromNow()}</p>
+                <p className='text-gray-600'>
+                    {moment(items.datePublished).startOf("hour").fromNow()}
+                </p>
             </div>
         </a>
     )); // renders when its news page
 
     return (
         <div
-            className={`
-            grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-gray-50 gap-5 ${
-                Home ? "py-5" : "p-5"
+            className={`bg-gray-50 flex flex-col gap-5 ${
+                Home ? "py-5" : "p-5 min-h-screen"
             }`}
         >
-            {Home ? displayWhenHomePage : displayWhenNewsPage}
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5'>
+                {Home ? displayWhenHomePage : displayWhenNewsPage}
+            </div>
         </div>
     );
 };
