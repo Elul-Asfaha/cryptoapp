@@ -44,7 +44,7 @@ const CryptoCurrencies = ({ displayCoins, Home }: CryptoCurrenciesType) => {
                 className='w-full bg-white p-5 border hover:shadow-md border-md'
             >
                 <div>
-                    <div className='flex  items-center justify-between'>
+                    <div className='flex items-center justify-between'>
                         <div className='flex gap-1 font-bold'>
                             <div>{items.rank}.</div>
                             <div>{items.name}</div>
@@ -75,10 +75,10 @@ const CryptoCurrencies = ({ displayCoins, Home }: CryptoCurrenciesType) => {
         <Link
             to={`/crypto/${items.uuid}`}
             key={items.uuid}
-            className='w-full bg-white p-5  border hover:shadow-md border-md'
+            className='w-full bg-white p-5 border hover:shadow-md border-md'
         >
             <div>
-                <div className='flex  items-center justify-between'>
+                <div className='flex items-center justify-between'>
                     <div className='flex gap-1 font-bold'>
                         <div>{items.rank}.</div>
                         <div>{items.name}</div>

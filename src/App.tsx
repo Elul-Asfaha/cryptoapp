@@ -952,7 +952,7 @@ const App = () => {
     // };
     // const fetchNewsData = async () => {
     //     const url =
-    //         "https://bing-news-search1.p.rapidapi.com/news?safeSearch=Off&textFormat=Raw";
+    //         "https://bing-news-search1.p.rapidapi.com/news/search?q=Cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=100";
     //     const options = {
     //         method: "GET",
     //         headers: {
