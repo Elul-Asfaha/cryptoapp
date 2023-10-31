@@ -2,23 +2,22 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 type CryptoCurrenciesType = {
     displayCoins: {
-        uuid?: string;
-        symbol?: string;
-        name?: string;
-        color?: string;
-        iconUrl?: string;
-        marketCap?: string;
-        price?: string;
-        listedAt?: number;
-        tier?: number;
-        change?: string;
-        rank?: number;
-        sparkline?: string[];
-        lowVolume?: boolean;
-        coinrankingUrl?: string;
-        "24hVolume"?: string;
-        btcPrice?: string;
-        Volume?: string;
+        uuid: string;
+        symbol: string;
+        name: string;
+        color: string;
+        iconUrl: string;
+        marketCap: string;
+        price: string;
+        listedAt: number;
+        tier: number;
+        change: string;
+        rank: number;
+        sparkline: string[];
+        lowVolume: boolean;
+        coinrankingUrl: string;
+        "24hVolume": string;
+        btcPrice: string;
     }[];
 
     Home: boolean;
@@ -104,7 +103,6 @@ const CryptoCurrencies = ({ displayCoins, Home }: CryptoCurrenciesType) => {
             </div>
         </Link>
     )); // renders when its cryptocurrencies page
-
     return (
         <div
             className={`bg-gray-50 flex flex-col gap-5 ${

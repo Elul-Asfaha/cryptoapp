@@ -929,6 +929,7 @@ const App = () => {
             url: "https://www.msn.com/de-de/nachrichten/welt/antij%C3%BCdischer-mob-st%C3%BCrmt-flughafen-nach-landung-einer-maschine-aus-tel-aviv/ar-AA1j3o1H",
         },
     ]);
+
     // const fetchCoinData = async () => {
     //     const url =
     //         "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
@@ -950,6 +951,7 @@ const App = () => {
     //         console.error(error);
     //     }
     // };
+
     // const fetchNewsData = async () => {
     //     const url =
     //         "https://bing-news-search1.p.rapidapi.com/news/search?q=Cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=100";
