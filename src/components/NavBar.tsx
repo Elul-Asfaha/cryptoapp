@@ -45,7 +45,7 @@ const NavBar = () => {
         <div className='flex md:flex-col w-full md:w-fit md:h-full justify-between md:justify-normal gap-3 p-3 bg-blue-950 text-slate-300'>
             <div className='flex gap-3 items-center'>
                 <div className='flex items-center gap-2'>
-                    <Link to='/' className='flex gap-4'>
+                    <Link to='/' className='flex items-center gap-4'>
                         <div className='flex h-[35px] w-[35px] rounded-full overflow-clip'>
                             <img src={logo} className='object-cover' />
                         </div>
