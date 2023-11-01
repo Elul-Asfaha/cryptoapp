@@ -3,7 +3,6 @@ import {
     NavBar,
     Home,
     CryptoCurrencies,
-    Exchanges,
     News,
     CryptoDetails,
     Footer,
@@ -902,31 +901,28 @@ const App = () => {
     ]);
     const [news, setNews] = useState([
         {
-            datePublished: "2023-10-29T20:42:00.0000000Z",
-            description:
-                "Im muslimisch geprägtem Nordkaukasus verstärken sich antisemitische Vorfälle. In der Teilrepublik Dagestan stürmte ein wütender Mob den Flughafen, nachdem dort eine Maschine aus Israel gelandet war",
+            datePublished: "",
+            description: "",
             image: {
                 thumbnail: {
-                    contentUrl:
-                        "https://www.bing.com/th?id=ORMS.91863e49b6ae4255e40f8c1c8d82fab6&pid=Wdp",
+                    contentUrl: "",
                 },
                 isLicensed: true,
             },
-            name: "Antijüdischer Mob stürmt Flughafen nach Landung einer Maschine aus Tel Aviv",
+            name: "",
             provider: [
                 {
                     image: {
                         thumbnail: [
                             {
-                                contentUrl:
-                                    "https://www.bing.com/th?id=ODF.VgKhVqBW0UdrpbRTR1Q2sg&pid=news",
+                                contentUrl: "",
                             },
                         ],
                     },
-                    name: "WELT",
+                    name: "",
                 },
             ],
-            url: "https://www.msn.com/de-de/nachrichten/welt/antij%C3%BCdischer-mob-st%C3%BCrmt-flughafen-nach-landung-einer-maschine-aus-tel-aviv/ar-AA1j3o1H",
+            url: "",
         },
     ]);
 
@@ -993,7 +989,6 @@ const App = () => {
                                 />
                             }
                         />
-                        <Route path='/exchanges' element={<Exchanges />} />
                         <Route
                             path='/cryptocurrencies'
                             element={

@@ -36,7 +36,7 @@ const News = ({ displayNews, Home }: newsType) => {
         >
             <div className='w-full flex gap-2'>
                 <p className='min-w-[65%] font-bold py-3'>{items.name}</p>
-                <div className='flex  max-h-[200px] max-w-[100px] w-full'>
+                <div className='flex h-[150px] w-full'>
                     <img
                         src={items?.image?.thumbnail?.contentUrl || demoImage}
                         alt='news'
@@ -44,7 +44,7 @@ const News = ({ displayNews, Home }: newsType) => {
                     />
                 </div>
             </div>
-            <p className='indent-5 text-gray-700'>
+            <p className='indent-3 text-gray-700'>
                 {items.description.length > 100
                     ? `${items.description.substring(0, 100)}...`
                     : items.description}
@@ -79,7 +79,7 @@ const News = ({ displayNews, Home }: newsType) => {
         >
             <div className='w-full flex gap-2'>
                 <p className='min-w-[65%] font-bold py-3'>{items.name}</p>
-                <div className='flex  max-h-[200px] max-w-[100px] w-full'>
+                <div className='flex h-[150px]  w-full'>
                     <img
                         src={items?.image?.thumbnail?.contentUrl || demoImage}
                         alt='news'
@@ -87,7 +87,7 @@ const News = ({ displayNews, Home }: newsType) => {
                     />
                 </div>
             </div>
-            <p className='indent-5 text-gray-700'>
+            <p className='indent-3 text-gray-700'>
                 {items.description.length > 100
                     ? `${items.description.substring(0, 100)}...`
                     : items.description}
