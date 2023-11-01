@@ -11,23 +11,22 @@ type HomeType = {
         totalMarkets?: number;
     };
     displayCoins: {
-        uuid?: string;
-        symbol?: string;
-        name?: string;
-        color?: string;
-        iconUrl?: string;
-        marketCap?: string;
-        price?: string;
-        listedAt?: number;
-        tier?: number;
-        change?: string;
-        rank?: number;
-        sparkline?: string[];
-        lowVolume?: boolean;
-        coinrankingUrl?: string;
-        "24hVolume"?: string;
-        btcPrice?: string;
-        Volume?: string;
+        uuid: string;
+        symbol: string;
+        name: string;
+        color: string;
+        iconUrl: string;
+        marketCap: string;
+        price: string;
+        listedAt: number;
+        tier: number;
+        change: string;
+        rank: number;
+        sparkline: string[];
+        lowVolume: boolean;
+        coinrankingUrl: string;
+        "24hVolume": string;
+        btcPrice: string;
     }[];
     displayNews: {
         datePublished: string;
@@ -88,7 +87,7 @@ const Home = ({ displayNews, displayStatus, displayCoins }: HomeType) => {
                     </p>
                 </div>
             </div>
-            <div className='flex justify-between items-center py-10'>
+            <div className='md:flex gap-2 justify-between items-center py-10'>
                 <p className='text-xl lg:text-3xl'>
                     Top 10 CryptoCurrencies in the world
                 </p>
