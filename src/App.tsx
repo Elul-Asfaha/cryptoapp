@@ -3,7 +3,6 @@ import {
     NavBar,
     Home,
     CryptoCurrencies,
-    Exchanges,
     News,
     CryptoDetails,
     Footer,
@@ -990,7 +989,6 @@ const App = () => {
                                 />
                             }
                         />
-                        <Route path='/exchanges' element={<Exchanges />} />
                         <Route
                             path='/cryptocurrencies'
                             element={

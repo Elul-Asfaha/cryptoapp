@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import NavItems from "./NavItems";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsCurrencyExchange } from "react-icons/bs";
-import { MdCurrencyExchange } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { useState } from "react";
@@ -18,11 +17,6 @@ const NavBar = () => {
             title: "CryptoCurrencies",
             path: "/cryptoCurrencies",
             icon: <BsCurrencyExchange />,
-        },
-        {
-            title: "Exchange",
-            path: "/exchange",
-            icon: <MdCurrencyExchange />,
         },
         {
             title: "News",

@@ -8,8 +8,8 @@ const Footer = () => {
             </p>
             <div className='flex gap-5 justify-center'>
                 <Link to='/'>Home</Link>
-                <Link to='/exchanges'>Exchanges</Link>
                 <Link to='/news'>News</Link>
+                <Link to='/cryptoCurrencies'>News</Link>
             </div>
         </div>
     );
