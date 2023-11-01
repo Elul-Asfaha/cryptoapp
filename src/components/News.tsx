@@ -79,7 +79,7 @@ const News = ({ displayNews, Home }: newsType) => {
         >
             <div className='w-full flex gap-2'>
                 <p className='min-w-[65%] font-bold py-3'>{items.name}</p>
-                <div className='flex h-[150px] w-[100px]'>
+                <div className='flex h-[150px]  w-full'>
                     <img
                         src={items?.image?.thumbnail?.contentUrl || demoImage}
                         alt='news'
