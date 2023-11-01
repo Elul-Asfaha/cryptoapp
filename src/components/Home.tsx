@@ -87,7 +87,7 @@ const Home = ({ displayNews, displayStatus, displayCoins }: HomeType) => {
                     </p>
                 </div>
             </div>
-            <div className='flex justify-between items-center py-10'>
+            <div className='md:flex gap-2 justify-between items-center py-10'>
                 <p className='text-xl lg:text-3xl'>
                     Top 10 CryptoCurrencies in the world
                 </p>

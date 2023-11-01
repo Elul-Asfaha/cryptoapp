@@ -6,6 +6,7 @@ import { MdCurrencyExchange } from "react-icons/md";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { useState } from "react";
+import logo from "../assets/logo.png";
 const NavBar = () => {
     const navItemData = [
         {
@@ -41,22 +42,26 @@ const NavBar = () => {
     };
 
     return (
-        <div className='hidden md:flex flex-col w-fit h-full gap-3 p-3 bg-blue-950 text-slate-300'>
+        <div className='flex md:flex-col w-full md:w-fit md:h-full justify-between md:justify-normal gap-3 p-3 bg-blue-950 text-slate-300'>
             <div className='flex gap-3 items-center'>
-                <div className={`${collapsed ? "hidden" : ""}`}>Avatar</div>
                 <div className='flex items-center gap-2'>
-                    <Link to='/' className='flex gap-1'>
-                        <div className=''>Logo</div>
+                    <Link to='/' className='flex gap-4'>
+                        <div className='flex h-[35px] w-[35px] rounded-full overflow-clip'>
+                            <img src={logo} className='object-cover' />
+                        </div>
                         <p className={`${collapsed ? "hidden" : ""}`}>
                             Cryptoverse
                         </p>
                     </Link>
                 </div>
-                <button onClick={handleCollapse} className='text-3xl'>
+                <button
+                    onClick={handleCollapse}
+                    className='hidden md:flex text-3xl'
+                >
                     {collapsed ? <HiChevronRight /> : <HiChevronLeft />}
                 </button>
             </div>
-            <div className='flex flex-col gap-3'>
+            <div className='flex md:flex-col gap-3'>
                 {navItemData.map((items) => (
                     <NavItems
                         key={items.title}

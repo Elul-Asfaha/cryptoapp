@@ -979,7 +979,7 @@ const App = () => {
     // }, []);
     return (
         <div className='h-screen max-h-screen w-full overflow-y-hidden'>
-            <div className='flex h-full'>
+            <div className='flex flex-col md:flex-row h-full'>
                 <NavBar />
                 <div className='w-full overflow-y-scroll'>
                     <Routes>
