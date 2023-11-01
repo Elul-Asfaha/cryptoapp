@@ -930,53 +930,53 @@ const App = () => {
         },
     ]);
 
-    // const fetchCoinData = async () => {
-    //     const url =
-    //         "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
-    //     const options = {
-    //         method: "GET",
-    //         headers: {
-    //             "X-RapidAPI-Key":
-    //                 "d1fd8aa275mshdfbdece75472e69p13a6b7jsnec1cb651fbf3",
-    //             "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
-    //         },
-    //     };
+    const fetchCoinData = async () => {
+        const url =
+            "https://coinranking1.p.rapidapi.com/coins?referenceCurrencyUuid=yhjMzLPhuIDl&timePeriod=24h&tiers%5B0%5D=1&orderBy=marketCap&orderDirection=desc&limit=50&offset=0";
+        const options = {
+            method: "GET",
+            headers: {
+                "X-RapidAPI-Key":
+                    "d1fd8aa275mshdfbdece75472e69p13a6b7jsnec1cb651fbf3",
+                "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
+            },
+        };
 
-    //     try {
-    //         const response = await fetch(url, options);
-    //         const result = await response.json();
-    //         setStats(result.data.stats);
-    //         setCoins(result.data.coins);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // };
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            setStats(result.data.stats);
+            setCoins(result.data.coins);
+        } catch (error) {
+            console.error(error);
+        }
+    };
 
-    // const fetchNewsData = async () => {
-    //     const url =
-    //         "https://bing-news-search1.p.rapidapi.com/news/search?q=Cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=100";
-    //     const options = {
-    //         method: "GET",
-    //         headers: {
-    //             "X-BingApis-SDK": "true",
-    //             "X-RapidAPI-Key":
-    //                 "d1fd8aa275mshdfbdece75472e69p13a6b7jsnec1cb651fbf3",
-    //             "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
-    //         },
-    //     };
+    const fetchNewsData = async () => {
+        const url =
+            "https://bing-news-search1.p.rapidapi.com/news/search?q=Cryptocurrency&safeSearch=Off&textFormat=Raw&freshness=Day&count=100";
+        const options = {
+            method: "GET",
+            headers: {
+                "X-BingApis-SDK": "true",
+                "X-RapidAPI-Key":
+                    "d1fd8aa275mshdfbdece75472e69p13a6b7jsnec1cb651fbf3",
+                "X-RapidAPI-Host": "bing-news-search1.p.rapidapi.com",
+            },
+        };
 
-    //     try {
-    //         const response = await fetch(url, options);
-    //         const result = await response.json();
-    //         setNews(result.value);
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // };
-    // useEffect(() => {
-    //     fetchCoinData();
-    //     fetchNewsData();
-    // }, []);
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            setNews(result.value);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+    useEffect(() => {
+        fetchCoinData();
+        fetchNewsData();
+    }, []);
     return (
         <div className='h-screen max-h-screen w-full overflow-y-hidden'>
             <div className='flex flex-col md:flex-row h-full'>
