@@ -38,32 +38,35 @@ const CryptoCurrencies = ({ displayCoins, Home }: CryptoCurrenciesType) => {
         ?.slice(0, 10)
         .map((items) => (
             <Link
-                to={`/crypto/${items.uuid}`}
-                key={items.uuid}
+                to={`/crypto/${items?.uuid}`}
+                key={items?.uuid}
                 className='w-full bg-white p-5 border hover:shadow-md border-md'
             >
                 <div>
                     <div className='flex items-center justify-between'>
                         <div className='flex gap-1 font-bold'>
-                            <div>{items.rank}.</div>
-                            <div>{items.name}</div>
+                            <div>{items?.rank}.</div>
+                            <div>{items?.name}</div>
                         </div>
                         <div className='flex h-[30px] w-[30px]'>
-                            <img className='object-cover' src={items.iconUrl} />
+                            <img
+                                className='object-cover'
+                                src={items?.iconUrl}
+                            />
                         </div>
                     </div>
                     <div className='py-5 flex flex-col gap-2'>
                         <div className='flex gap-1'>
                             <p>Price:</p>
-                            {items.price}
+                            {items?.price}
                         </div>
                         <div className='flex gap-1'>
                             <p>Market Cap:</p>
-                            {items.marketCap}
+                            {items?.marketCap}
                         </div>
                         <div className='flex gap-1'>
                             <p>Daily Change:</p>
-                            {items.change}
+                            {items?.change}
                         </div>
                     </div>
                 </div>
@@ -72,32 +75,32 @@ const CryptoCurrencies = ({ displayCoins, Home }: CryptoCurrenciesType) => {
 
     const displayWhenCryptoCurrenciesPage = coinsToBeDisplayed?.map((items) => (
         <Link
-            to={`/crypto/${items.uuid}`}
-            key={items.uuid}
+            to={`/crypto/${items?.uuid}`}
+            key={items?.uuid}
             className='w-full bg-white p-5 border hover:shadow-md border-md'
         >
             <div>
                 <div className='flex items-center justify-between'>
                     <div className='flex gap-1 font-bold'>
-                        <div>{items.rank}.</div>
-                        <div>{items.name}</div>
+                        <div>{items?.rank}.</div>
+                        <div>{items?.name}</div>
                     </div>
                     <div className='flex h-[30px] w-[30px]'>
-                        <img className='object-cover' src={items.iconUrl} />
+                        <img className='object-cover' src={items?.iconUrl} />
                     </div>
                 </div>
                 <div className='py-5 flex flex-col gap-2'>
                     <div className='flex gap-1'>
                         <p>Price:</p>
-                        {items.price}
+                        {items?.price}
                     </div>
                     <div className='flex gap-1'>
                         <p>Market Cap:</p>
-                        {items.marketCap}
+                        {items?.marketCap}
                     </div>
                     <div className='flex gap-1'>
                         <p>Daily Change:</p>
-                        {items.change}
+                        {items?.change}
                     </div>
                 </div>
             </div>
