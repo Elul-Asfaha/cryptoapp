@@ -26,7 +26,9 @@ const NavItems = ({
                 onClick={() => activeHandler(title)}
             >
                 <div className='text-2xl'>{icon}</div>
-                <p className={`${collapsed ? "hidden" : ""}`}>{title}</p>
+                <p className={`hidden md:block${collapsed ? "hidden" : ""}`}>
+                    {title}
+                </p>
             </div>
         </Link>
     );
